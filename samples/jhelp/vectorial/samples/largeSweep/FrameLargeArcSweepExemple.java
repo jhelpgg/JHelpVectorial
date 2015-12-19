@@ -1,3 +1,13 @@
+/**
+ * <h1>License :</h1> <br>
+ * The following code is deliver as is. I take care that code compile and work, but I am not responsible about any damage it may
+ * cause.<br>
+ * You can use, modify, the code as your need for any usage. But you can't do any action that avoid me or other person use,
+ * modify this code. The code is free for usage and modification, you can't change that fact.<br>
+ * <br>
+ * 
+ * @author JHelp
+ */
 package jhelp.vectorial.samples.largeSweep;
 
 import java.awt.BorderLayout;
@@ -162,13 +172,10 @@ public class FrameLargeArcSweepExemple
       Path path = new Path();
       path.moveTo(false, x1, y1);
       path.ellipticalArcTo(false, width, height, 0, false, false, x2, y2);
-      layer.stroke(new Shape(path), 0xFF000000);
       path.moveTo(false, x1, y1);
       path.ellipticalArcTo(false, width, height, 0, false, true, x2, y2);
-      layer.stroke(new Shape(path), 0xFF000000);
       path.moveTo(false, x1, y1);
       path.ellipticalArcTo(false, width, height, 0, true, false, x2, y2);
-      layer.stroke(new Shape(path), 0xFF000000);
       path.moveTo(false, x1, y1);
       path.ellipticalArcTo(false, width, height, 0, true, true, x2, y2);
       layer.stroke(new Shape(path), 0xFF000000);
