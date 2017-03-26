@@ -90,7 +90,7 @@ public class LineTo
    protected boolean equalsIntern(final PathElement pathElement)
    {
       final LineTo lineTo = (LineTo) pathElement;
-      return (UtilMath.equals(this.x, lineTo.x) == true) && (UtilMath.equals(this.y, lineTo.y) == true);
+      return (UtilMath.equals(this.x, lineTo.x)) && (UtilMath.equals(this.y, lineTo.y));
    }
 
    /**
@@ -148,7 +148,7 @@ public class LineTo
       double x = this.x;
       double y = this.y;
 
-      if(this.isRelative() == true)
+      if(this.isRelative())
       {
          x += referenceX;
          y += referenceY;
@@ -187,7 +187,7 @@ public class LineTo
     */
    public void setX(final double x)
    {
-      if(UtilMath.equals(this.x, x) == true)
+      if(UtilMath.equals(this.x, x))
       {
          return;
       }
@@ -204,7 +204,7 @@ public class LineTo
     */
    public void setY(final double y)
    {
-      if(UtilMath.equals(this.y, y) == true)
+      if(UtilMath.equals(this.y, y))
       {
          return;
       }

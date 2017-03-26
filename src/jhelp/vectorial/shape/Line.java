@@ -127,14 +127,14 @@ public class Line
          return false;
       }
 
-      if((object instanceof Line) == false)
+      if(!(object instanceof Line))
       {
          return false;
       }
 
       final Line line = (Line) object;
-      return (UtilMath.equals(this.startX, line.startX) == true) && (UtilMath.equals(this.startY, line.startY) == true)
-            && (UtilMath.equals(this.endX, line.endX) == true) && (UtilMath.equals(this.endY, line.endY) == true);
+      return (UtilMath.equals(this.startX, line.startX)) && (UtilMath.equals(this.startY, line.startY))
+            && (UtilMath.equals(this.endX, line.endX)) && (UtilMath.equals(this.endY, line.endY));
    }
 
    /**
@@ -219,7 +219,7 @@ public class Line
     */
    public boolean isPoint()
    {
-      return (UtilMath.equals(this.startX, this.endX) == true) && (UtilMath.equals(this.startY, this.endY) == true);
+      return (UtilMath.equals(this.startX, this.endX)) && (UtilMath.equals(this.startY, this.endY));
    }
 
    /**

@@ -183,7 +183,7 @@ public class Matrix
 
       this.determinant = (matrix00 * matrix11) - (matrix01 * matrix10);
 
-      if(UtilMath.isNul(this.determinant) == true)
+      if(UtilMath.isNul(this.determinant))
       {
          throw new IllegalArgumentException("The matrix MUST be invertible !");
       }
@@ -258,23 +258,23 @@ public class Matrix
          return false;
       }
 
-      if((object instanceof Matrix) == false)
+      if(!(object instanceof Matrix))
       {
          return false;
       }
 
       final Matrix matrix = (Matrix) object;
 
-      return (UtilMath.equals(this.determinant, matrix.determinant) == true) //
-            && (UtilMath.equals(this.matrix00, matrix.matrix00) == true) //
-            && (UtilMath.equals(this.matrix10, matrix.matrix10) == true) //
-            && (UtilMath.equals(this.matrix20, matrix.matrix20) == true) //
-            && (UtilMath.equals(this.matrix01, matrix.matrix01) == true) //
-            && (UtilMath.equals(this.matrix11, matrix.matrix11) == true) //
-            && (UtilMath.equals(this.matrix21, matrix.matrix21) == true) //
-            && (UtilMath.equals(this.matrix02, matrix.matrix02) == true) //
-            && (UtilMath.equals(this.matrix12, matrix.matrix12) == true) //
-            && (UtilMath.equals(this.matrix22, matrix.matrix22) == true) //
+      return (UtilMath.equals(this.determinant, matrix.determinant)) //
+            && (UtilMath.equals(this.matrix00, matrix.matrix00)) //
+            && (UtilMath.equals(this.matrix10, matrix.matrix10)) //
+            && (UtilMath.equals(this.matrix20, matrix.matrix20)) //
+            && (UtilMath.equals(this.matrix01, matrix.matrix01)) //
+            && (UtilMath.equals(this.matrix11, matrix.matrix11)) //
+            && (UtilMath.equals(this.matrix21, matrix.matrix21)) //
+            && (UtilMath.equals(this.matrix02, matrix.matrix02)) //
+            && (UtilMath.equals(this.matrix12, matrix.matrix12)) //
+            && (UtilMath.equals(this.matrix22, matrix.matrix22)) //
       ;
    }
 
@@ -567,7 +567,7 @@ public class Matrix
     */
    public Matrix scale(final double scaleX, final double scaleY, Matrix result)
    {
-      if((UtilMath.isNul(scaleX) == true) || (UtilMath.isNul(scaleY) == true))
+      if((UtilMath.isNul(scaleX)) || (UtilMath.isNul(scaleY)))
       {
          throw new IllegalArgumentException("Scale can't be zero");
       }
@@ -615,7 +615,7 @@ public class Matrix
     */
    public Matrix shear(final double shearX, final double shearY, Matrix result)
    {
-      if(UtilMath.equals(shearX * shearY, 1) == true)
+      if(UtilMath.equals(shearX * shearY, 1))
       {
          throw new IllegalArgumentException("shearX *shearY MUSN'T be 1");
       }
@@ -670,7 +670,7 @@ public class Matrix
     */
    public Matrix shear(final double shear, final Matrix result)
    {
-      if(UtilMath.equals(shear, 1) == true)
+      if(UtilMath.equals(shear, 1))
       {
          throw new IllegalArgumentException("shear MUSN'T be 1");
       }
@@ -921,7 +921,7 @@ public class Matrix
     */
    public void toScale(final double scaleX, final double scaleY)
    {
-      if((UtilMath.isNul(scaleX) == true) || (UtilMath.isNul(scaleY) == true))
+      if((UtilMath.isNul(scaleX)) || (UtilMath.isNul(scaleY)))
       {
          throw new IllegalArgumentException("Scale can't be zero");
       }
@@ -947,7 +947,7 @@ public class Matrix
     */
    public void toShear(final double shear)
    {
-      if(UtilMath.equals(shear, 1) == true)
+      if(UtilMath.equals(shear, 1))
       {
          throw new IllegalArgumentException("shear MUSN'T be 1");
       }
@@ -965,7 +965,7 @@ public class Matrix
     */
    public void toShear(final double shearX, final double shearY)
    {
-      if(UtilMath.equals(shearX * shearY, 1) == true)
+      if(UtilMath.equals(shearX * shearY, 1))
       {
          throw new IllegalArgumentException("shearX *shearY MUSN'T be 1");
       }

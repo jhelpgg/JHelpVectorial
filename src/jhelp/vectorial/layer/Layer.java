@@ -5,7 +5,7 @@
  * You can use, modify, the code as your need for any usage. But you can't do any action that avoid me or other person use,
  * modify this code. The code is free for usage and modification, you can't change that fact.<br>
  * <br>
- * 
+ *
  * @author JHelp
  */
 package jhelp.vectorial.layer;
@@ -24,7 +24,7 @@ import jhelp.vectorial.shape.Shape;
 /**
  * A layer draw/fill several shape in it.<br>
  * It have a name, position and scale
- * 
+ *
  * @author JHelp
  */
 public class Layer
@@ -69,7 +69,7 @@ public class Layer
 
    /**
     * Create a new instance of Layer
-    * 
+    *
     * @param parent
     *           Canvas parent owner
     * @param width
@@ -97,7 +97,7 @@ public class Layer
 
    /**
     * Draw shape border
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -117,7 +117,7 @@ public class Layer
 
    /**
     * Draw shape border with a thick line
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -139,7 +139,7 @@ public class Layer
 
    /**
     * Draw a shape border with color variation
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -169,7 +169,7 @@ public class Layer
 
    /**
     * Fill shape with one color
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -189,7 +189,7 @@ public class Layer
 
    /**
     * Fill shape with a texture
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -209,7 +209,7 @@ public class Layer
 
    /**
     * Fill shape with paint
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -238,7 +238,7 @@ public class Layer
 
    /**
     * Paint a shape description
-    * 
+    *
     * @param width
     *           Layer width
     * @param height
@@ -290,7 +290,7 @@ public class Layer
          {
             this.draw(width, height, pixels, shape, color);
          }
-         else if(isNeon == false)
+         else if(!isNeon)
          {
             this.draw(width, height, pixels, shape, color, strokeWidth);
          }
@@ -307,7 +307,7 @@ public class Layer
 
    /**
     * Add shape to draw
-    * 
+    *
     * @param shapeDescription
     *           Shape to add
     */
@@ -325,7 +325,7 @@ public class Layer
 
    /**
     * Fill a shape with a color
-    * 
+    *
     * @param shape
     *           Shape to fill
     * @param color
@@ -338,7 +338,7 @@ public class Layer
 
    /**
     * Fill a shape with texture
-    * 
+    *
     * @param shape
     *           Shape to fill
     * @param texture
@@ -351,7 +351,7 @@ public class Layer
 
    /**
     * Fill a shape with paint
-    * 
+    *
     * @param shape
     *           Shape to fill
     * @param paint
@@ -364,7 +364,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param fillColor
@@ -379,7 +379,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param fillColor
@@ -396,7 +396,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param texture
@@ -411,7 +411,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param texture
@@ -428,7 +428,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param paint
@@ -443,7 +443,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param paint
@@ -460,7 +460,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border with color variation
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param fillColor
@@ -479,7 +479,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border with color variation
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param texture
@@ -498,7 +498,7 @@ public class Layer
 
    /**
     * Fill a shape and draw its border with color variation
-    * 
+    *
     * @param shape
     *           Shape to fill and stroke
     * @param paint
@@ -517,7 +517,7 @@ public class Layer
 
    /**
     * Background color
-    * 
+    *
     * @return Background color
     */
    public int getBackground()
@@ -527,7 +527,7 @@ public class Layer
 
    /**
     * Layer height
-    * 
+    *
     * @return Layer height
     */
    public int getHeight()
@@ -537,7 +537,7 @@ public class Layer
 
    /**
     * Layer name
-    * 
+    *
     * @return Layer name
     */
    public String getName()
@@ -547,7 +547,7 @@ public class Layer
 
    /**
     * Background paint
-    * 
+    *
     * @return Background paint
     */
    public JHelpPaint getPaintBackground()
@@ -557,7 +557,7 @@ public class Layer
 
    /**
     * Obtain a shape
-    * 
+    *
     * @param index
     *           Shape index
     * @return Desired shape
@@ -569,7 +569,7 @@ public class Layer
 
    /**
     * Background texture
-    * 
+    *
     * @return Background texture
     */
    public JHelpImage getTextureBackground()
@@ -579,7 +579,7 @@ public class Layer
 
    /**
     * Layer translation
-    * 
+    *
     * @return Layer translation
     */
    public Point getTranslate()
@@ -589,7 +589,7 @@ public class Layer
 
    /**
     * Layer width
-    * 
+    *
     * @return Layer width
     */
    public int getWidth()
@@ -599,7 +599,7 @@ public class Layer
 
    /**
     * Zoom in X
-    * 
+    *
     * @return Zoom in X
     */
    public double getZoomX()
@@ -609,7 +609,7 @@ public class Layer
 
    /**
     * Zoom in Y
-    * 
+    *
     * @return Zoom in Y
     */
    public double getZoomY()
@@ -619,7 +619,7 @@ public class Layer
 
    /**
     * Insert a shape
-    * 
+    *
     * @param index
     *           Index where insert
     * @param shapeDescription
@@ -634,7 +634,7 @@ public class Layer
 
       shapeDescription.registerShapeDescriptionChangeListener(this);
 
-      if((this.shapes.isEmpty() == true) || (index >= this.shapes.size()))
+      if((this.shapes.isEmpty()) || (index >= this.shapes.size()))
       {
          this.shapes.add(shapeDescription);
          this.layerHaveChanged();
@@ -647,7 +647,7 @@ public class Layer
 
    /**
     * Indicates if layer is visible
-    * 
+    *
     * @return {@code true} if layer is visible
     */
    public boolean isVisible()
@@ -657,7 +657,7 @@ public class Layer
 
    /**
     * Number of shapes
-    * 
+    *
     * @return Number of shapes
     */
    public int numberOfShape()
@@ -667,7 +667,7 @@ public class Layer
 
    /**
     * Remove a shape
-    * 
+    *
     * @param index
     *           Shape index to remove
     */
@@ -679,7 +679,7 @@ public class Layer
 
    /**
     * Change background to uniform color
-    * 
+    *
     * @param background
     *           new background color
     */
@@ -698,8 +698,8 @@ public class Layer
 
    /**
     * Change the layer name.<br>
-    * If given name already exists for an other layer inside the canvas parent, the name will be add az number to make it unique
-    * 
+    * If given name already exists for an other layer inside the canvas parent, the name will be add a number to make it unique
+    *
     * @param name
     *           New desired name
     * @return The real given name
@@ -717,7 +717,7 @@ public class Layer
 
    /**
     * change background to a paint
-    * 
+    *
     * @param paintBackground
     *           New paint background
     */
@@ -728,7 +728,7 @@ public class Layer
          throw new NullPointerException("paintBackground musn't be null");
       }
 
-      if((this.textureBackground == null) && (paintBackground.equals(this.paintBackground) == true))
+      if((this.textureBackground == null) && (paintBackground.equals(this.paintBackground)))
       {
          return;
       }
@@ -740,7 +740,7 @@ public class Layer
 
    /**
     * Change precision for all current embed shape
-    * 
+    *
     * @param precision
     *           New precision
     */
@@ -754,7 +754,7 @@ public class Layer
 
    /**
     * Change background to a texture
-    * 
+    *
     * @param textureBackground
     *           New texture background
     */
@@ -765,7 +765,7 @@ public class Layer
          throw new NullPointerException("textureBackground musn't be null");
       }
 
-      if((this.paintBackground == null) && (textureBackground.equals(this.textureBackground) == true))
+      if((this.paintBackground == null) && (textureBackground.equals(this.textureBackground)))
       {
          return;
       }
@@ -777,7 +777,7 @@ public class Layer
 
    /**
     * Change layer translation
-    * 
+    *
     * @param x
     *           New X
     * @param y
@@ -785,7 +785,7 @@ public class Layer
     */
    public void setTranslate(final double x, final double y)
    {
-      if((UtilMath.equals(this.translateX, x) == true) && (UtilMath.equals(this.translateY, y) == true))
+      if((UtilMath.equals(this.translateX, x)) && (UtilMath.equals(this.translateY, y)))
       {
          return;
       }
@@ -797,7 +797,7 @@ public class Layer
 
    /**
     * Change layer visibility
-    * 
+    *
     * @param visible
     *           New visibility
     */
@@ -814,7 +814,7 @@ public class Layer
 
    /**
     * change zoom on X and Y
-    * 
+    *
     * @param zoom
     *           New zoom on X and Y
     */
@@ -825,7 +825,7 @@ public class Layer
          throw new IllegalArgumentException("Zoom MUST be >0 not " + zoom);
       }
 
-      if((UtilMath.equals(zoom, this.zoomX) == true) && (UtilMath.equals(zoom, this.zoomY) == true))
+      if((UtilMath.equals(zoom, this.zoomX)) && (UtilMath.equals(zoom, this.zoomY)))
       {
          return;
       }
@@ -837,7 +837,7 @@ public class Layer
 
    /**
     * Change zoom in X
-    * 
+    *
     * @param zoomX
     *           New zoom in X
     */
@@ -848,7 +848,7 @@ public class Layer
          throw new IllegalArgumentException("Zoom MUST be >0 not " + zoomX);
       }
 
-      if(UtilMath.equals(zoomX, this.zoomX) == true)
+      if(UtilMath.equals(zoomX, this.zoomX))
       {
          return;
       }
@@ -859,7 +859,7 @@ public class Layer
 
    /**
     * Change zoom in Y
-    * 
+    *
     * @param zoomY
     *           New zoom in Y
     */
@@ -870,7 +870,7 @@ public class Layer
          throw new IllegalArgumentException("Zoom MUST be >0 not " + zoomY);
       }
 
-      if(UtilMath.equals(zoomY, this.zoomY) == true)
+      if(UtilMath.equals(zoomY, this.zoomY))
       {
          return;
       }
@@ -884,7 +884,7 @@ public class Layer
     * <br>
     * <b>Parent documentation:</b><br>
     * {@inheritDoc}
-    * 
+    *
     * @param shapeDescription
     *           Changed shape
     * @see jhelp.vectorial.event.ShapeDescriptionChangeListener#shapeDescriptionChanged(jhelp.vectorial.layer.ShapeDescription)
@@ -897,7 +897,7 @@ public class Layer
 
    /**
     * Draw shape border
-    * 
+    *
     * @param shape
     *           Shape to draw
     * @param color
@@ -910,7 +910,7 @@ public class Layer
 
    /**
     * Draw shape border
-    * 
+    *
     * @param shape
     *           Shape to draw
     * @param color
@@ -925,7 +925,7 @@ public class Layer
 
    /**
     * Draw shape border with color variation
-    * 
+    *
     * @param shape
     *           Shape to draw
     * @param color
@@ -942,22 +942,24 @@ public class Layer
 
    /**
     * Update the embed image
-    * 
+    *
     * @return Updated image
     */
    public JHelpImage updateImage()
    {
-      if(this.needUpdate == true)
+      if(this.needUpdate)
       {
          this.needUpdate = false;
          this.embedImage.startDrawMode();
 
          if(this.paintBackground != null)
          {
+            this.embedImage.clear(0);
             this.embedImage.fillRectangle(0, 0, this.width, this.height, this.paintBackground, false);
          }
          else if(this.textureBackground != null)
          {
+            this.embedImage.clear(0);
             this.embedImage.fillRectangle(0, 0, this.width, this.height, this.textureBackground, false);
          }
          else

@@ -90,7 +90,7 @@ public class MoveTo
    protected boolean equalsIntern(final PathElement pathElement)
    {
       final MoveTo moveTo = (MoveTo) pathElement;
-      return (UtilMath.equals(this.x, moveTo.x) == true) && (UtilMath.equals(this.y, moveTo.y) == true);
+      return (UtilMath.equals(this.x, moveTo.x)) && (UtilMath.equals(this.y, moveTo.y));
    }
 
    /**
@@ -148,7 +148,7 @@ public class MoveTo
       double x = this.x;
       double y = this.y;
 
-      if(this.isRelative() == true)
+      if(this.isRelative())
       {
          x += referenceX;
          y += referenceY;
@@ -186,7 +186,7 @@ public class MoveTo
     */
    public void setX(final double x)
    {
-      if(UtilMath.equals(this.x, x) == true)
+      if(UtilMath.equals(this.x, x))
       {
          return;
       }
@@ -203,7 +203,7 @@ public class MoveTo
     */
    public void setY(final double y)
    {
-      if(UtilMath.equals(this.y, y) == true)
+      if(UtilMath.equals(this.y, y))
       {
          return;
       }

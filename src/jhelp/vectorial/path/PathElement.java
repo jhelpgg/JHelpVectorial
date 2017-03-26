@@ -44,34 +44,34 @@ public abstract class PathElement
          final String name = json.getKeys().iterator().next();
          final ObjectJSON value = json.get(name).getObject();
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_CLOSE_PATH.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_CLOSE_PATH.equals(name))
          {
             return ClosePath.CLOSE_PATH;
          }
 
          final boolean relative = value.get(VectorialConstants.PARAMETER_RELATIVE).getBoolean();
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_CUBIC_BEZIER_TO.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_CUBIC_BEZIER_TO.equals(name))
          {
             return new CubicBezierTo(relative, value);
          }
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_ELLIPTICAL_ARC_TO.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_ELLIPTICAL_ARC_TO.equals(name))
          {
             return new EllipticalArcTo(relative, value);
          }
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_LINE_TO.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_LINE_TO.equals(name))
          {
             return new LineTo(relative, value);
          }
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_MOVE_TO.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_MOVE_TO.equals(name))
          {
             return new MoveTo(relative, value);
          }
 
-         if(VectorialConstants.KEY_PATH_ELEMENT_QUADRIC_BEZIER_TO.equals(name) == true)
+         if(VectorialConstants.KEY_PATH_ELEMENT_QUADRIC_BEZIER_TO.equals(name))
          {
             return new QuadricBezierTo(relative, value);
          }
@@ -179,7 +179,8 @@ public abstract class PathElement
          return false;
       }
 
-      if(this.getClass().equals(object.getClass()) == false)
+      if(!this.getClass()
+              .equals(object.getClass()))
       {
          return false;
       }
@@ -238,7 +239,7 @@ public abstract class PathElement
 
       synchronized(this.listeners)
       {
-         if(this.listeners.contains(listener) == false)
+         if(!this.listeners.contains(listener))
          {
             this.listeners.add(listener);
          }

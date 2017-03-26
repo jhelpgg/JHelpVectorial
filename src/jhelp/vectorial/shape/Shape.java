@@ -167,7 +167,7 @@ public class Shape
          start++;
          line = list.get(start);
 
-         if((UtilMath.equals(line.getStartX(), x) == false) || (UtilMath.equals(line.getStartY(), y) == false))
+         if((!UtilMath.equals(line.getStartX(), x)) || (!UtilMath.equals(line.getStartY(), y)))
          {
             return start;
          }
@@ -228,7 +228,7 @@ public class Shape
          curx = line.getStartX();
          cury = line.getStartY();
 
-         if(UtilMath.equals(cury, lasty) == true)
+         if(UtilMath.equals(cury, lasty))
          {
             continue;
          }
@@ -343,7 +343,7 @@ public class Shape
       {
          for(int x = xStart; x < xEnd; x++)
          {
-            if(this.insideSupposeInsideBox(x, y) == true)
+            if(this.insideSupposeInsideBox(x, y))
             {
                shapeFiller.fillShapePixel(this, x, y);
             }
@@ -440,7 +440,8 @@ public class Shape
     */
    public boolean inside(final double x, final double y)
    {
-      if(this.getBoundingBox().isInside(x, y) == false)
+      if(!this.getBoundingBox()
+              .isInside(x, y))
       {
          return false;
       }
@@ -476,7 +477,7 @@ public class Shape
 
       int end;
 
-      if(fillEnds == true)
+      if(fillEnds)
       {
          end = this.endPolygon(list, start, size);
          this.ends.add(end);
@@ -491,14 +492,14 @@ public class Shape
 
       do
       {
-         if(this.insidePolygon(x, y, list, start, end) == true)
+         if(this.insidePolygon(x, y, list, start, end))
          {
             numberInside++;
          }
 
          start = end;
 
-         if(fillEnds == true)
+         if(fillEnds)
          {
             end = this.endPolygon(list, start, size);
             this.ends.add(end);
@@ -545,7 +546,7 @@ public class Shape
 
       synchronized(this.listeners)
       {
-         if(this.listeners.contains(shapeChangeListener) == false)
+         if(!this.listeners.contains(shapeChangeListener))
          {
             this.listeners.add(shapeChangeListener);
          }
@@ -562,7 +563,7 @@ public class Shape
     */
    public void setPosition(final double x, final double y)
    {
-      if((UtilMath.equals(this.x, x) == true) && (UtilMath.equals(this.y, y) == true))
+      if((UtilMath.equals(this.x, x)) && (UtilMath.equals(this.y, y)))
       {
          return;
       }
@@ -628,7 +629,7 @@ public class Shape
          throw new IllegalArgumentException("Scales MUST be > 0 , not " + scaleX + "x" + scaleY);
       }
 
-      if((UtilMath.equals(this.scaleX, scaleX) == true) && (UtilMath.equals(this.scaleY, scaleY) == true))
+      if((UtilMath.equals(this.scaleX, scaleX)) && (UtilMath.equals(this.scaleY, scaleY)))
       {
          return;
       }

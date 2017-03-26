@@ -102,10 +102,10 @@ public class QuadricBezierTo
    protected boolean equalsIntern(final PathElement pathElement)
    {
       final QuadricBezierTo quadricBezierTo = (QuadricBezierTo) pathElement;
-      return (UtilMath.equals(this.controlPointX, quadricBezierTo.controlPointX) == true)//
-            && (UtilMath.equals(this.controlPointY, quadricBezierTo.controlPointY) == true)//
-            && (UtilMath.equals(this.x, quadricBezierTo.x) == true) //
-            && (UtilMath.equals(this.y, quadricBezierTo.y) == true) //
+      return (UtilMath.equals(this.controlPointX, quadricBezierTo.controlPointX))//
+            && (UtilMath.equals(this.controlPointY, quadricBezierTo.controlPointY))//
+            && (UtilMath.equals(this.x, quadricBezierTo.x)) //
+            && (UtilMath.equals(this.y, quadricBezierTo.y)) //
       ;
    }
 
@@ -170,7 +170,7 @@ public class QuadricBezierTo
       double x = this.x;
       double y = this.y;
 
-      if(this.isRelative() == true)
+      if(this.isRelative())
       {
          controlPointX += referenceX;
          controlPointY += referenceY;
@@ -231,7 +231,7 @@ public class QuadricBezierTo
     */
    public void setControlPointX(final double controlPointX)
    {
-      if(UtilMath.equals(this.controlPointX, controlPointX) == true)
+      if(UtilMath.equals(this.controlPointX, controlPointX))
       {
          return;
       }
@@ -248,7 +248,7 @@ public class QuadricBezierTo
     */
    public void setControlPointY(final double controlPointY)
    {
-      if(UtilMath.equals(this.controlPointY, controlPointY) == true)
+      if(UtilMath.equals(this.controlPointY, controlPointY))
       {
          return;
       }
@@ -265,7 +265,7 @@ public class QuadricBezierTo
     */
    public void setX(final double x)
    {
-      if(UtilMath.equals(this.x, x) == true)
+      if(UtilMath.equals(this.x, x))
       {
          return;
       }
@@ -282,7 +282,7 @@ public class QuadricBezierTo
     */
    public void setY(final double y)
    {
-      if(UtilMath.equals(this.y, y) == true)
+      if(UtilMath.equals(this.y, y))
       {
          return;
       }

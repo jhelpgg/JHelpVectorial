@@ -148,7 +148,7 @@ public class Angle
          return false;
       }
 
-      if((object instanceof Angle) == false)
+      if(!(object instanceof Angle))
       {
          return false;
       }

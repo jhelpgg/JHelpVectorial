@@ -90,7 +90,7 @@ public enum AngleUnit
    {
       for(final AngleUnit angleUnit : AngleUnit.values())
       {
-         if(angleUnit.unitName.equalsIgnoreCase(unitName) == true)
+         if(angleUnit.unitName.equalsIgnoreCase(unitName))
          {
             return angleUnit;
          }

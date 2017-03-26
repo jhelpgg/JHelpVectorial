@@ -115,12 +115,12 @@ public class CubicBezierTo
    protected boolean equalsIntern(final PathElement pathElement)
    {
       final CubicBezierTo cubicBezierTo = (CubicBezierTo) pathElement;
-      return (UtilMath.equals(this.firstControlPointX, cubicBezierTo.firstControlPointX) == true)//
-            && (UtilMath.equals(this.firstControlPointY, cubicBezierTo.firstControlPointY) == true)//
-            && (UtilMath.equals(this.secondControlPointX, cubicBezierTo.secondControlPointX) == true) //
-            && (UtilMath.equals(this.secondControlPointY, cubicBezierTo.secondControlPointY) == true)//
-            && (UtilMath.equals(this.x, cubicBezierTo.x) == true) //
-            && (UtilMath.equals(this.y, cubicBezierTo.y) == true) //
+      return (UtilMath.equals(this.firstControlPointX, cubicBezierTo.firstControlPointX))//
+            && (UtilMath.equals(this.firstControlPointY, cubicBezierTo.firstControlPointY))//
+            && (UtilMath.equals(this.secondControlPointX, cubicBezierTo.secondControlPointX)) //
+            && (UtilMath.equals(this.secondControlPointY, cubicBezierTo.secondControlPointY))//
+            && (UtilMath.equals(this.x, cubicBezierTo.x)) //
+            && (UtilMath.equals(this.y, cubicBezierTo.y)) //
       ;
    }
 
@@ -191,7 +191,7 @@ public class CubicBezierTo
       double x = this.x;
       double y = this.y;
 
-      if(this.isRelative() == true)
+      if(this.isRelative())
       {
          firstControlPointX += referenceX;
          firstControlPointY += referenceY;
@@ -274,7 +274,7 @@ public class CubicBezierTo
     */
    public void setFirstControlPointX(final double firstControlPointX)
    {
-      if(UtilMath.equals(this.firstControlPointX, firstControlPointX) == true)
+      if(UtilMath.equals(this.firstControlPointX, firstControlPointX))
       {
          return;
       }
@@ -291,7 +291,7 @@ public class CubicBezierTo
     */
    public void setFirstControlPointY(final double firstControlPointY)
    {
-      if(UtilMath.equals(this.firstControlPointY, firstControlPointY) == true)
+      if(UtilMath.equals(this.firstControlPointY, firstControlPointY))
       {
          return;
       }
@@ -308,7 +308,7 @@ public class CubicBezierTo
     */
    public void setSecondControlPointX(final double secondControlPointX)
    {
-      if(UtilMath.equals(this.secondControlPointX, secondControlPointX) == true)
+      if(UtilMath.equals(this.secondControlPointX, secondControlPointX))
       {
          return;
       }
@@ -325,7 +325,7 @@ public class CubicBezierTo
     */
    public void setSecondControlPointY(final double secondControlPointY)
    {
-      if(UtilMath.equals(this.secondControlPointY, secondControlPointY) == true)
+      if(UtilMath.equals(this.secondControlPointY, secondControlPointY))
       {
          return;
       }
@@ -342,7 +342,7 @@ public class CubicBezierTo
     */
    public void setX(final double x)
    {
-      if(UtilMath.equals(this.x, x) == true)
+      if(UtilMath.equals(this.x, x))
       {
          return;
       }
@@ -359,7 +359,7 @@ public class CubicBezierTo
     */
    public void setY(final double y)
    {
-      if(UtilMath.equals(this.y, y) == true)
+      if(UtilMath.equals(this.y, y))
       {
          return;
       }

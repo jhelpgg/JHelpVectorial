@@ -620,7 +620,7 @@ public class ShapeDescription
 
       synchronized(this.listeners)
       {
-         if(this.listeners.contains(shapeDescriptionChangeListener) == false)
+         if(!this.listeners.contains(shapeDescriptionChangeListener))
          {
             this.listeners.add(shapeDescriptionChangeListener);
          }
@@ -659,7 +659,7 @@ public class ShapeDescription
          throw new NullPointerException("fillPaint musn't be null");
       }
 
-      if((this.fillTexture == null) && (fillPaint.equals(this.fillPaint) == true))
+      if((this.fillTexture == null) && (fillPaint.equals(this.fillPaint)))
       {
          return;
       }
@@ -682,7 +682,7 @@ public class ShapeDescription
          throw new NullPointerException("fillTexture musn't be null");
       }
 
-      if((this.fillPaint == null) && (fillTexture.equals(this.fillTexture) == true))
+      if((this.fillPaint == null) && (fillTexture.equals(this.fillTexture)))
       {
          return;
       }
@@ -705,7 +705,7 @@ public class ShapeDescription
          throw new IllegalArgumentException("Neon factor MUST be >0, not :" + neonFactor);
       }
 
-      if(UtilMath.equals(neonFactor, this.neonFactor) == true)
+      if(UtilMath.equals(neonFactor, this.neonFactor))
       {
          return;
       }
@@ -727,7 +727,7 @@ public class ShapeDescription
          throw new NullPointerException("shape musn't be null");
       }
 
-      if(this.shape.equals(shape) == true)
+      if(this.shape.equals(shape))
       {
          return;
       }
@@ -804,7 +804,7 @@ public class ShapeDescription
          throw new NullPointerException("style musn't be null");
       }
 
-      if(this.style.equals(style) == true)
+      if(this.style.equals(style))
       {
          return;
       }

@@ -5,12 +5,13 @@
  * You can use, modify, the code as your need for any usage. But you can't do any action that avoid me or other person use,
  * modify this code. The code is free for usage and modification, you can't change that fact.<br>
  * <br>
- * 
+ *
  * @author JHelp
  */
 package jhelp.vectorial.samples.largeSweep;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,7 +30,7 @@ import jhelp.vectorial.shape.Shape;
 
 /**
  * Frame for understand the role of <b>largeArc</b> and <b>sweep</b>
- * 
+ *
  * @author JHelp
  */
 public class FrameLargeArcSweepExemple
@@ -37,7 +38,7 @@ public class FrameLargeArcSweepExemple
 {
    /**
     * Event manager
-    * 
+    *
     * @author JHelp
     */
    private class EventManager
@@ -55,7 +56,7 @@ public class FrameLargeArcSweepExemple
        * <br>
        * <b>Parent documentation:</b><br>
        * {@inheritDoc}
-       * 
+       *
        * @param actionEvent
        *           Event description
        * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
@@ -67,26 +68,27 @@ public class FrameLargeArcSweepExemple
       }
    }
 
+   private static final Font           FONT                        = new Font("Arial", Font.BOLD, 32);
    /**
     * Layer name and button text for <br>
     * large arc</b> disable and <b>sweep</b> disable
     */
-   private static final String         LARGE_ARC_FALSE_SWEEP_FALSE = "largeArc=false | sweep=false";
+   private static final String         LARGE_ARC_FALSE_SWEEP_FALSE = "<html><center>largeArc=false<br><br><br>sweep=false</center></html>";
    /**
     * Layer name and button text for <br>
     * large arc</b> disable and <b>sweep</b> enable
     */
-   private static final String         LARGE_ARC_FALSE_SWEEP_TRUE  = "largeArc=false | sweep=true";
+   private static final String         LARGE_ARC_FALSE_SWEEP_TRUE  = "<html><center>largeArc=false<br><br><br>sweep=true</center></html>";
    /**
     * Layer name and button text for <br>
     * large arc</b> enable and <b>sweep</b> disable
     */
-   private static final String         LARGE_ARC_TRUE_SWEEP_FALSE  = "largeArc=true | sweep=false";
+   private static final String         LARGE_ARC_TRUE_SWEEP_FALSE  = "<html><center>largeArc=true<br><br><br>sweep=false</center></html>";
    /**
     * Layer name and button text for <br>
     * large arc</b> enable and <b>sweep</b> enable
     */
-   private static final String         LARGE_ARC_TRUE_SWEEP_TRUE   = "largeArc=true | sweep=true";
+   private static final String         LARGE_ARC_TRUE_SWEEP_TRUE   = "<html><center>largeArc=true<br><br><br>sweep=true</center></html>";
    /** Main layer name */
    private static final String         MAIN_LAYER                  = "main";
    /** Main image size (width and height) */
@@ -116,7 +118,7 @@ public class FrameLargeArcSweepExemple
       this.setLayout(new BorderLayout());
       this.add(this.sampleLabelJHelpImage, BorderLayout.CENTER);
 
-      final JPanel panel = new JPanel(new GridLayout(4, 1));
+      final JPanel panel = new JPanel(new GridLayout(2, 2));
       final ButtonGroup buttonGroup = new ButtonGroup();
 
       JToggleButton button = this.createButton(FrameLargeArcSweepExemple.LARGE_ARC_FALSE_SWEEP_FALSE);
@@ -143,7 +145,7 @@ public class FrameLargeArcSweepExemple
 
    /**
     * Create a toggle button
-    * 
+    *
     * @param text
     *           Button text
     * @return Created button
@@ -151,6 +153,7 @@ public class FrameLargeArcSweepExemple
    private JToggleButton createButton(final String text)
    {
       final JToggleButton button = new JToggleButton(text);
+      button.setFont(FrameLargeArcSweepExemple.FONT);
       button.setActionCommand(text);
       button.addActionListener(this.eventManager);
       return button;
@@ -209,8 +212,8 @@ public class FrameLargeArcSweepExemple
    }
 
    /**
-    * Called when a button is clicked
-    * 
+    * Called when a button is clicked.
+    *
     * @param action
     *           Clicked button action
     */
@@ -224,7 +227,7 @@ public class FrameLargeArcSweepExemple
       {
          layer = this.canvas.getLayer(i);
          name = layer.getName();
-         layer.setVisible((FrameLargeArcSweepExemple.MAIN_LAYER.equals(name) == true) || (name.equals(action) == true));
+         layer.setVisible((FrameLargeArcSweepExemple.MAIN_LAYER.equals(name)) || (name.equals(action)));
       }
 
       this.sampleLabelJHelpImage.setJHelpImage(this.canvas.updateImage());

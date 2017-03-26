@@ -226,7 +226,8 @@ public class Canvas
    {
       for(final Layer layer : this.layers)
       {
-         if(layer.getName().equals(name) == true)
+         if(layer.getName()
+                 .equals(name))
          {
             return layer;
          }
@@ -250,7 +251,7 @@ public class Canvas
 
       synchronized(this.listeners)
       {
-         if(this.listeners.contains(canvasChangeListener) == false)
+         if(!this.listeners.contains(canvasChangeListener))
          {
             this.listeners.add(canvasChangeListener);
          }
@@ -304,14 +305,14 @@ public class Canvas
     */
    public JHelpImage updateImage()
    {
-      if(this.needToUpdate == true)
+      if(this.needToUpdate)
       {
          this.embedImage.startDrawMode();
          this.embedImage.clear(0);
 
          for(final Layer layer : this.layers)
          {
-            if(layer.isVisible() == true)
+            if(layer.isVisible())
             {
                this.embedImage.drawImage(0, 0, layer.updateImage());
             }
